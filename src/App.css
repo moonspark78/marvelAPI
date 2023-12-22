@@ -58,3 +58,21 @@ p{
   height: 75%;
   transition: 0.5s;
 }
+
+.card img:hover{
+  transform: scale(1.1);
+}
+
+.card .title{
+  text-align: center;
+  padding: 1rem;
+  font-size: 17px;
+}
+
+.card::after,
+.card::before{
+  content: "";
+  position: absolute;
+  background: #B41F23;
+  z-index: -1;
+}
