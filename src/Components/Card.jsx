@@ -1,7 +1,13 @@
 import React from 'react'
-import hulk from "../Images/hulk.jpg"
+import { useNavigate } from 'react-router-dom';
+
 
 export const Card = ({data}) => {
+
+    let navigate = useNavigate();
+
+
+
   return (
     <>
 
@@ -9,7 +15,7 @@ export const Card = ({data}) => {
         (data)?(
             data.map(item => {
                 return (
-                    <div className='card'>
+                    <div className='card' key={item.id} onClick={() => navigate(`/${item.id}`)}>
                         <img src={`${item.thumbnail.path}.${item.thumbnail.extension}`} alt='img-hero'/>
                         <div className='title'>
                             <h3>{item.name}</h3>
