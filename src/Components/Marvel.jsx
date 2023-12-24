@@ -8,7 +8,7 @@ export const Marvel = () => {
   const [item, setItem] = useState();
   const fetch = async () => {
     const res = await axios.get(
-      `https://gateway.marvel.com:443/v1/public/characters/${id}?ts=1&apikey=f66445c5348289a347bb12ba06e99853&hash=7aaa8bc006a3cb9db66e8f9fcf477902`
+      `https://gateway.marvel.com:443/v1/public/characters/${id}?ts=1&apikey=9bb439618f16495a280f7185fabdb287&hash=d41d8cd98f00b204e9800998ecf8427e`
     );
     setItem(res.data.data.results[0]);
   };
@@ -17,7 +17,7 @@ export const Marvel = () => {
   return (
     <>
      {
-        (!item)? "" : (
+        (!item)? "not" : (
             <div className="box-centent">
                 <div className="right-box">
                     <img src={`${item.thumbnail.path}.${item.thumbnail.extension}`} alt="img-marvel"/>
